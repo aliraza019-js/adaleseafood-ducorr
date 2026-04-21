@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ─── Primary: Abyssal Navy (design.md) ─── */
+  --color-primary: #001e40;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #003366;
+  --color-on-primary-container: #cce0ff;
+  --color-primary-dim: #001229;
+  --color-primary-fixed: #4d7db5;
+  --color-primary-fixed-dim: #2a5a8c;
+  --color-inverse-primary: #9ac0e8;
+
+  /* ─── Secondary: Gilded Accent (design.md) ─── */
+  --color-secondary: #755b00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #c4952a;
+  --color-on-secondary-container: #3d2f00;
+  --color-secondary-dim: #4d3c00;
+  --color-secondary-fixed: #f0d080;
+  --color-secondary-fixed-dim: #e0bc50;
+
+  /* ─── Tertiary: Warm Amber (kept for depth) ─── */
+  --color-tertiary: #5c3d00;
+  --color-on-tertiary: #fff8ee;
+  --color-tertiary-container: #c4952a;
+  --color-on-tertiary-container: #3d2f00;
+  --color-tertiary-fixed: #c4952a;
+  --color-tertiary-fixed-dim: #a87818;
+  --color-tertiary-dim: #3d2600;
+  --color-on-tertiary-fixed: #261900;
+  --color-on-tertiary-fixed-variant: #4d3000;
+
+  /* ─── Surface Architecture ─── */
+  --color-background: #f9f6f2;
+  --color-surface: #f9f6f2;
+  --color-surface-bright: #f9f9fc;
+  --color-surface-dim: #d8d9de;
+  --color-on-surface: #1a1c1e;
+  --color-on-surface-variant: #43474e;
+  --color-surface-variant: #dededf;
+  --color-surface-tint: #001e40;
+
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f6;
+  --color-surface-container: #eaeaed;
+  --color-surface-container-high: #e4e4e8;
+  --color-surface-container-highest: #dededf;
+
+  --color-on-background: #1a1c1e;
+  --color-inverse-surface: #2e3134;
+  --color-inverse-on-surface: #f1f0f5;
+
+  /* ─── Outline ─── */
+  --color-outline: #737780;
+  --color-outline-variant: #c3c6d1;
+
+  /* ─── Error ─── */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #410002;
+
+  /* ─── Typography ─── */
+  --font-headline: "Epilogue", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  /* ─── Border Radius ─── */
+  --radius: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-2xl: 3rem;
+  --radius-full: 9999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #f9f6f2;
+    color: #1a1c1e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  h1, h2, h3, h4 {
+    font-family: "Epilogue", sans-serif;
+  }
 }
